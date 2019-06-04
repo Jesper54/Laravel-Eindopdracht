@@ -30,5 +30,10 @@
                   </div>
                 </div>
               </div>
-</div>
+          </div>
+
+
+          <!-- For each met alle topics die er al zijn vanuit de database -->
+          
+
 @endsection
