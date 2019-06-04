@@ -55,7 +55,7 @@
 
 
                         <li class="nav-item">
-                            <a class="nav-link categories" href="#">{{ __('Categories') }}</a>
+                            <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Categories') }}</a>
                         </li>
 
 

@@ -12,12 +12,16 @@
         <!-- Styles -->
         <style>
             html, body {
-                background-color: #fff;
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+            }
+
+            .homescreen {
+                background-image: url("https://images.wallpaperscraft.com/image/the_elder_scrolls_skyrim_bas_magician_dragon_fantasy_96134_1920x1080.jpg");
+                background-repeat: no-repeat;
             }
 
             .full-height {
@@ -64,9 +68,10 @@
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height">
+        <div class="flex-center position-ref full-height homescreen">
             @if (Route::has('login'))
                 <div class="top-right links">
+                        <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Categories') }}</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>
                     @else
@@ -80,8 +85,8 @@
             @endif
 
             <div class="content">
-                <div class="title m-b-md">
-                    Laravel
+                <div class="title m-b-md" style="color:white; font-size:100px;">
+                    Eternal Gaming
                 </div>
             </div>
         </div>
