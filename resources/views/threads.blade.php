@@ -9,6 +9,8 @@
                 </div>
             </div>
 
+            <button onclick="location.href='{{ url('add-topic') }}'">Make a topic</button>
+
         <!-- Categorieën -->
         <div class="row">
                 <div class="col-sm-6">
@@ -34,6 +36,6 @@
 
 
           <!-- For each met alle topics die er al zijn vanuit de database -->
-          
+
 
 @endsection
