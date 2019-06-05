@@ -19,11 +19,6 @@
                 margin: 0;
             }
 
-            .homescreen {
-                background-image: url("https://images.wallpaperscraft.com/image/the_elder_scrolls_skyrim_bas_magician_dragon_fantasy_96134_1920x1080.jpg");
-                background-repeat: no-repeat;
-            }
-
             .full-height {
                 height: 100vh;
             }
@@ -54,7 +49,6 @@
 
             .links > a {
                 color: #636b6f;
-                padding: 0 25px;
                 font-size: 13px;
                 font-weight: 600;
                 letter-spacing: .1rem;
@@ -65,12 +59,34 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .home_screen_bg {
+                background-image: url("https://images.wallpaperscraft.com/image/the_elder_scrolls_skyrim_bas_magician_dragon_fantasy_96134_1920x1080.jpg");
+                background-repeat: no-repeat;
+            }
+
+            .navbar_home {
+                background-color: white;
+
+                border-radius: 4px;
+            }
+
+            .navbar_home a{
+                display: inline-block;
+                height: 100%;
+                padding: 7px 25px;
+            }
+
+            .navbar_home a:hover {
+                background-color: #cccfd1;
+                transition-duration: 300ms;
+            }
         </style>
     </head>
     <body>
-        <div class="flex-center position-ref full-height homescreen">
+        <div class="flex-center position-ref full-height home_screen_bg">
             @if (Route::has('login'))
-                <div class="top-right links">
+                <div class="top-right links navbar_home">
                         <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Categories') }}</a>
                     @auth
                         <a href="{{ url('/home') }}">Home</a>

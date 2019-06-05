@@ -20,6 +20,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 //Custom routes
-Route::get('/threads', function () {
-    return view('threads');
-});
+Route::get('/topic', 'ThreadController@show');
+Route::get('/threads', 'ThreadController@threads');
+// Route::get('/topic', 'TopicController@topic');
