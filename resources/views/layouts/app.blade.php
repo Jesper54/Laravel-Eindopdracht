@@ -58,8 +58,12 @@
                             @endif
                         @else
 
+                        <!-- Create New Topic -->
+                        <li class="nav-item">
+                            <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Make a topic') }}</a>
+                        </li>
 
-
+                        <!-- Categories -->
                         <li class="nav-item">
                             <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Categories') }}</a>
                         </li>

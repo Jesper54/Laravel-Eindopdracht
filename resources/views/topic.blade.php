@@ -9,11 +9,6 @@
                 </div>
             </div>
 
-            @auth
-            <button onclick="#">Make a topic</button>
-            @endauth
-
-
         <!-- Topics -->
         
 
@@ -21,7 +16,7 @@
           @foreach ($topics as $topic)
           <div class="card w-75">
             <div class="card-body">
-              <h5 class="card-title">{{$topic->title}}</h5>
+            <h5 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">Author: {{$topic->user->name}}</span><br> <span style="float:right; font-size:13px;">Date: {{$topic->created_at}}</span></h5> 
               <p class="card-text">{{$topic->body}}</p>
               <a href="#" class="btn btn-primary">Click here</a>
             </div>
@@ -30,6 +25,6 @@
           @endforeach
           
           <br>
-          <a href="{{ $topic->links }}">Next page</a>
+          {{ $topics->links() }}
 
 @endsection

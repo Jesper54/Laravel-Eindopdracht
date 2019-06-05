@@ -8,12 +8,6 @@
                     <h1>Categories</h1>
                 </div>
             </div>
-
-            @auth
-            <button onclick="location.href='{{ url('add-topic') }}'">Make a topic</button>
-            @endauth
-
-
         <!-- Categorieën -->
         <div class="row">
 

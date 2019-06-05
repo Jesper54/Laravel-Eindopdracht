@@ -12,4 +12,9 @@ class Topic extends Model
     public function threads() {
     return $this->belongsTo('App\Thread');
     }
+
+    public function user()
+    {
+        return $this->belongsTo('App\User');
+    }
 }

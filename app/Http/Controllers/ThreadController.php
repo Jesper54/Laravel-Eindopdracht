@@ -17,7 +17,7 @@ class ThreadController extends Controller
 
         public function show(Thread $thread)
     {
-        $topics = $thread->topics()->paginate(5);
+        $topics = $thread->topics()->paginate(6);
         
         return view('topic', compact('topics'));
     }
