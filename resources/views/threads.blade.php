@@ -25,7 +25,7 @@
                   <div class="card-body">
                   <h5 class="card-title">{{$thread->title}}</h5>
                   <p class="card-text">{{$thread->body}}</p>
-                  <a href="threads/{{$thread->id}}" class="btn btn-primary">Click here</a>
+                  <a href="{{ route('threads.id', ['id' => $thread->id]) }}" class="btn btn-primary">Click here</a>
                   </div>
                 </div>
               </div>

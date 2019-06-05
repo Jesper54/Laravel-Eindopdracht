@@ -4,12 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Topic;
+use App\Thread;
 
 class TopicController extends Controller
 {
     public function topic()
     {
         $topics = Topic::all();
-        return view('topic', compact('topic'));
+        dd($topics);
+        return view('topic', ['topics' => $topics]);
     }
 }
