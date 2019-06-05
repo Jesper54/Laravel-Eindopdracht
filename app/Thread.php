@@ -8,7 +8,7 @@ class Thread extends Model
 {
     protected $guarded = [];
 
-    public function topic()
+    public function topics()
     {
         return $this->hasMany('App\Topic');
     }

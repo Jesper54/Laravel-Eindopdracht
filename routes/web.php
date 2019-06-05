@@ -19,8 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Custom routes
-// Route::get('/topic', 'ThreadController@show');
+//Custom routes;
 Route::get('threads', 'ThreadController@threads')->name('threads');
-Route::get('threads/{id}', 'ThreadController@show')->name('threads.id');
+Route::get('threads/{thread}', 'ThreadController@show')->name('threads.id');
 Route::get('/topic', 'TopicController@topic');

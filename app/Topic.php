@@ -6,7 +6,10 @@ use Illuminate\Database\Eloquent\Model;
 
 class Topic extends Model
 {
-    public function topics() {
-        // return $this->belongsTo('App\Thread');
+
+    protected $guarded = [];
+
+    public function threads() {
+    return $this->belongsTo('App\Thread');
     }
 }

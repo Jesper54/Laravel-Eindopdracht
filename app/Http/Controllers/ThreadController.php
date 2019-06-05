@@ -11,14 +11,14 @@ class ThreadController extends Controller
     public function threads()
     {
         $threads = Thread::all();
-        $topics = Topic::all();
 
         return view('threads', compact('threads'));
     }
 
-    public function show(Thread $thread)
+        public function show(Thread $thread)
     {
-        $topics = Topic::where('thread_id', $thread->id)->get();
-        return view('topic', compact('thread', 'topics'));
+        $topics = $thread->topics()->paginate(5);
+        
+        return view('topic', compact('topics'));
     }
 }

@@ -63,6 +63,7 @@
             .home_screen_bg {
                 background-image: url("https://images.wallpaperscraft.com/image/the_elder_scrolls_skyrim_bas_magician_dragon_fantasy_96134_1920x1080.jpg");
                 background-repeat: no-repeat;
+                background-size: cover;
             }
 
             .navbar_home {

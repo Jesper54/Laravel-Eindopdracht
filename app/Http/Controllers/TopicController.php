@@ -8,10 +8,9 @@ use App\Thread;
 
 class TopicController extends Controller
 {
-    public function topic()
+        public function topic(Thread $thread)
     {
-        $topics = Topic::all();
-        dd($topics);
-        return view('topic', ['topics' => $topics]);
+        $topics = Topic::where('id',$thread->id)->get();
+        return view('topic', compact('topics'));
     }
 }
