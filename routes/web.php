@@ -24,4 +24,4 @@ Route::get('threads', 'ThreadController@threads')->name('threads');
 Route::get('threads/{thread}', 'ThreadController@show')->name('threads.id');
 Route::get('/topic', 'TopicController@topic');
 Route::get('/account', 'AccountController@account');
-Route::get('/create_topic', 'CreateTopicController@show');
+Route::get('/createTopic', 'CreateTopicController@show');

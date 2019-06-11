@@ -16,13 +16,14 @@
                 </div>
                 <div class="form-group">
                   <label for="category">Category</label>
+
                   <select class="form-control" id="exampleFormControlSelect1">
-
-                    @foreach ($collection as $item)
-                    <option>1</option>
+                    <option value="0">Selecteer een onderwerp</option>
+                    @foreach ($threads as $item)
+                        <option value="{{ $item->id }}">{{ $item->title }}</option>
                     @endforeach
-
                   </select>
+
                 </div>
                 <div class="form-group">
                   <label for="exampleFormControlTextarea1">Example textarea</label>

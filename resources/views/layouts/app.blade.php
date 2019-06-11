@@ -60,7 +60,7 @@
 
                         <!-- Create New Topic -->
                         <li class="nav-item">
-                            <a class="nav-link categories" href="{{ url('/create_topic') }}">{{ __('Make a topic') }}</a>
+                            <a class="nav-link categories" href="{{ url('/createTopic') }}">{{ __('Make a topic') }}</a>
                         </li>
 
                         <!-- Categories -->
