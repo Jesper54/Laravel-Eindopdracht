@@ -17,4 +17,9 @@ class Topic extends Model
     {
         return $this->belongsTo('App\User');
     }
+
+    protected $fillable =
+    [
+        'title', 'user_id', 'thread_id', 'body'
+    ];
 }

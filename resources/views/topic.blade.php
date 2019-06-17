@@ -17,8 +17,8 @@
           <div class="card w-75">
             <div class="card-body">
             <h5 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">Author: {{$topic->user->name}}</span><br> <span style="float:right; font-size:13px;">Date: {{$topic->created_at}}</span></h5>
-              <p class="card-text">{{$topic->body}}</p>
-              <a href="#" class="btn btn-primary">Click here</a>
+              <p class="card-text">{{ substr($topic->body, 0,  75) }} ...</p>
+              <a href="{{ route('topics.id', ['id' => $topic->id]) }}" class="btn btn-primary">Click here</a>
             </div>
           </div>
           <br>

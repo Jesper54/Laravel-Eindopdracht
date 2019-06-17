@@ -26,5 +26,8 @@ Route::get('/topic', 'TopicController@topic');
 Route::get('/account', 'AccountController@account');
 Route::get('/createTopic', 'CreateTopicController@show');
 
+Route::get('/topicView/{topic}', 'TopicViewController@show')->name('topics.id');
+Route::get('/topicView', 'TopicViewController@topic');
+
 //POST
 Route::post('/createTopic', 'CreateTopicController@store');

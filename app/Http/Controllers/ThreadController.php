@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Thread;
 use App\Topic;
+use Str;
 
 class ThreadController extends Controller
 {
