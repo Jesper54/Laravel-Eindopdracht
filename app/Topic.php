@@ -10,7 +10,7 @@ class Topic extends Model
     protected $guarded = [];
 
     public function threads() {
-    return $this->belongsTo('App\Thread');
+        return $this->belongsTo('App\Thread');
     }
 
     public function user()

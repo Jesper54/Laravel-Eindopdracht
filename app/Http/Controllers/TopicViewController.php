@@ -15,9 +15,6 @@ class TopicViewController extends Controller
 
     public function show(Topic $topic)
     {
-        $topic = $topics->topics();
-
-        return view('topics', compact('topic'));
-
+        return view('TopicView', compact('topic'));
     }
 }
