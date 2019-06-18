@@ -22,4 +22,9 @@ class Topic extends Model
     [
         'title', 'user_id', 'thread_id', 'body'
     ];
+
+    public function topics()
+    {
+        return $this->hasMany('App\Topic');
+    }
 }
