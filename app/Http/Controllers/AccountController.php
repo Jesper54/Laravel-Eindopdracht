@@ -10,6 +10,7 @@ use Auth;
 use Hash;
 use Image;
 use Redirect;
+use File;
 
 class AccountController extends Controller
 {
@@ -56,16 +57,25 @@ class AccountController extends Controller
     {
         if($request->hasFile('avatar')){
             
-            $extensions = ["jpg" , "jpeg", "png"];
-            $avatar = $request->file('avatar');
-            $isImage = $avatar->getClientOriginalExtension();
+             $extensions = ["jpg" , "jpeg", "png"];
+             $avatar = $request->file('avatar');
+             $isImage = $avatar->getClientOriginalExtension();
 
-            if (in_array($isImage , $extensions)){
-            $filename = time() . '.' . $avatar->getClientOriginalExtension();
-    		Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
-    		$user = Auth::user();
-    		$user->avatar = $filename;
-            $user->save();
+            if (in_array($isImage , $extensions)){  
+            
+                $old_file=Auth::user()->avatar;
+            if('/uploads/avatars/'.$old_file == "/uploads/avatars/default.jpg"){
+                
+            }
+            else {
+                \File::delete(public_path('/uploads/avatars/'.$old_file));
+            }
+
+             $filename = time() . '.' . $avatar->getClientOriginalExtension();
+    		 Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
+    		 $user = Auth::user();
+             $user->avatar = $filename;
+             $user->save();
             
             return redirect()->back();   
             }
