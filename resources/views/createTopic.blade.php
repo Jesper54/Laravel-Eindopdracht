@@ -15,7 +15,7 @@
 
                 <div class="form-group">
                   <label for="title">Title</label>
-                  <input type="title" class="form-control" name="title" id="title" placeholder="Title of the topic">
+                  <input required type="title" class="form-control" name="title" id="title" placeholder="Title of the topic">
                 </div>
 
                 <div class="form-group">
@@ -36,7 +36,7 @@
 
                 <div class="form-group">
                   <label for="text">Text</label>
-                  <textarea class="form-control" id="text" name="text" rows="8" placeholder="The main text"></textarea>
+                  <textarea required class="form-control" id="text" name="text" rows="8" placeholder="The main text"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary">Create</button>
                 <button class="btn btn-warning">Cancel</button>

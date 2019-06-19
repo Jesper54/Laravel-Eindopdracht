@@ -22,26 +22,43 @@
             <br>
             <br>
 
+            <hr>
+
             <div class="content">
                     <div class="title m-b-md">
                         <h3>Settings</h3>
                     </div>
                 </div>
+                
 
-            <div class="settings">
-                <form>
-                    {{ csrf_field() }}
+            <div class="settings" id="settings">
                         <div class="form-group">
                             <label for="username">Change username</label>
                             <div class="input-group">
-                                <input type="title" class="form-control" name="username" id="username" placeholder="Enter new username">
-                            <span class="input-group-btn" style="width: 40%;">
-                                <button type="submit" class="btn btn-primary">Apply</button>
-                            </span>
-                        </div>
-                </form>
-            </div>
 
+                                <form method="POST" action="ChangeUsername">
+                                        {{ csrf_field() }}
+                                    <input type="title" class="form-control" name="username" id="username" placeholder="Enter new username">
+                                    <span class="input-group-btn" style="width: 40%;">
+                                <button type="submit" class="btn btn-primary">Apply</button>
+                            </form>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                        <label for="username">Change Password</label>
+                        <div class="input-group">
+
+                            <form method="POST" action="ChangePassword">
+                                    {{ csrf_field() }}
+                                <input type="title" class="form-control" name="password" id="password" placeholder="Enter old password">
+                                <span class="input-group-btn" style="width: 40%;">
+                            <button type="submit" class="btn btn-primary">Apply</button>
+                        </form>
+                    </span>
+                </div>
+            </div>
             
 
 @endsection

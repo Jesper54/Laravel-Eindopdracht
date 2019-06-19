@@ -31,3 +31,5 @@ Route::get('/topicView', 'TopicViewController@topic')->name('topics');
 
 //POST
 Route::post('/createTopic', 'CreateTopicController@store');
+Route::post('/CreateReaction/{topic}', 'TopicViewController@store')->name('comment');
+

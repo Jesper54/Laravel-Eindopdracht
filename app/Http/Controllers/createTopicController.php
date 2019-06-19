@@ -32,23 +32,6 @@ class createTopicController extends Controller
             'body' => $request->text
         ]);
 
-        // $topic = new Topic;
-        // $topic->title = $request('title');
-        // $topic->thread_id = $request('category');
-        // $topic->user_id = Auth::id();
-        // $topic->body = $request('text');
-
-        // $topic->save;
-
-
-        // $title = $request->input('title');
-        // $thread_id = $request->input('category');
-        // $user_id = Auth::id();
-        // $body = $request->input('text');
-        // $data=array('title'=>$title,"thread_id"=>$thread_id,"user_id"=>$user_id,"body"=>$body);
-        // DB::table('topics')->insert($data);
-
-
         return redirect()->route('threads');
     }
 
