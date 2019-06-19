@@ -32,5 +32,7 @@ Route::get('/topicView', 'TopicViewController@topic')->name('topics');
 //POST
 Route::post('/createTopic', 'CreateTopicController@store');
 Route::post('/CreateReaction/{topic}', 'TopicViewController@store')->name('comment');
-Route::post('/ChangeUsername', 'AccountController@store');
+Route::post('/ChangeUsername', 'AccountController@storeUsername');
+Route::post('/ChangeEmail', 'AccountController@storeEmail');
+Route::post('ChangePassword', 'AccountController@storePassword');
 
