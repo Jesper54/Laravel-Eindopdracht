@@ -32,32 +32,18 @@
                 
 
             <div class="settings" id="settings">
-                        <div class="form-group">
-                            <label for="username">Change username</label>
-                            <div class="input-group">
 
-                                <form method="POST" action="ChangeUsername">
-                                        {{ csrf_field() }}
-                                    <input type="title" class="form-control" name="username" id="username" placeholder="Enter new username">
-                                    <span class="input-group-btn" style="width: 40%;">
-                                <button type="submit" class="btn btn-primary">Apply</button>
-                            </form>
-                        </span>
-                    </div>
-                </div>
-
-                <div class="form-group">
-                        <label for="username">Change Password</label>
+            <form method="POST" action="ChangeUsername">
+                {{ csrf_field() }}
+                    <label for="username">Change username</label>
                         <div class="input-group">
-
-                            <form method="POST" action="ChangePassword">
-                                    {{ csrf_field() }}
-                                <input type="title" class="form-control" name="password" id="password" placeholder="Enter old password">
-                                <span class="input-group-btn" style="width: 40%;">
+                            <input type="text" class="form-control" name="username" id="username" placeholder="Enter new username">
+                            <span class="input-group-btn" style="width: 40%;">
                             <button type="submit" class="btn btn-primary">Apply</button>
-                        </form>
-                    </span>
-                </div>
+                            </span>
+                        </div>
+                    </form>
+
             </div>
             
 

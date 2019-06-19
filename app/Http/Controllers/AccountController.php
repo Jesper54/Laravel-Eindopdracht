@@ -15,4 +15,9 @@ class AccountController extends Controller
     {
         $this->middleware('auth');
     }
+    
+    public function store(Request $request)
+    {
+        
+    }
 }
