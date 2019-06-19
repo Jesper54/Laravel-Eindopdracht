@@ -8,6 +8,8 @@ use App\Replies;
 use App\Topic;
 use Auth;
 use Hash;
+use Image;
+use Redirect;
 
 class AccountController extends Controller
 {
@@ -52,6 +54,24 @@ class AccountController extends Controller
 
     public function storePicture(Request $request)
     {
-        
+        if($request->hasFile('avatar')){
+            
+            $extensions = ["jpg" , "jpeg", "png"];
+            $avatar = $request->file('avatar');
+            $isImage = $avatar->getClientOriginalExtension();
+
+            if (in_array($isImage , $extensions)){
+            $filename = time() . '.' . $avatar->getClientOriginalExtension();
+    		Image::make($avatar)->resize(300, 300)->save( public_path('/uploads/avatars/' . $filename ) );
+    		$user = Auth::user();
+    		$user->avatar = $filename;
+            $user->save();
+            
+            return redirect()->back();   
+            }
+            else {
+                return Redirect::back()->withErrors(['This filetype is not supported!', 'The Message']);
+            }
+        }
     }
 }

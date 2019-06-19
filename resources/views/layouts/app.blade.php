@@ -68,13 +68,11 @@
                             <a class="nav-link categories" href="{{ url('/threads') }}">{{ __('Categories') }}</a>
                         </li>
 
-
-
                             <li class="nav-item dropdown">
                                 <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                                        <img class="card-img-top" style="height:32px; width:32px; border-radius:50%; margin-right:5px;" src="/uploads/avatars/{{ Auth::user()->avatar }}" alt="Profile picture">
                                     {{ Auth::user()->name }} <span class="caret"></span>
                                 </a>
-
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item fa fa-btn fa-user" href="{{ url('account') }}">Profile</a>
                                 <a class="dropdown-item" href="{{ url('account') }}#settings">Settings</a>

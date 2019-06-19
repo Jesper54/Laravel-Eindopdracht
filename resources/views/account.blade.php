@@ -51,12 +51,16 @@
 
             <div class="settings" id="settings">
 
+                    @if($errors->any())
+                    <a style="color:red">{{$errors->first()}}</a>
+                    @endif
+
             <form enctype="multipart/form-data" action="ChangePicture" method="POST">
                 {{ csrf_field() }}
                 <label for="picture">Change profile picture</label>
 
                 <div class="input-group">
-                        <input type="file" name="avatar">
+                        <input type="file" accept="image/*" name="avatar">
                         <span class="input-group-btn" style="width: 40%;">
                                 <button type="submit" class="btn btn-primary">Change</button>
                         </span>
