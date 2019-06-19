@@ -11,7 +11,7 @@
                             </div>
                         </div>
                     <div class="row">
-                        <div class="col-md-4">
+                        <div class="col-md-4" style="padding-bottom:100px;">
                                 <div class="card" style="width: 18rem;">
                                         {{-- Nog upload maken voor profiel foto --}}
                                         <img class="card-img-top" style="height:250px; width:auto;" src="https://media1.giphy.com/media/jVAt83ieT49H6ja5Ty/giphy.webp" alt="Card image cap">
