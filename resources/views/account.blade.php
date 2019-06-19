@@ -12,13 +12,14 @@
                         </div>
                     <div class="row">
                         <div class="col-md-4" style="padding-bottom:100px;">
-                                <div class="card" style="width: 18rem;">
+                                <div class="card" style="width: 18rem; margin-top:29px;">
                                         {{-- Nog upload maken voor profiel foto --}}
-                                        <img class="card-img-top" style="height:250px; width:auto;" src="https://media1.giphy.com/media/jVAt83ieT49H6ja5Ty/giphy.webp" alt="Card image cap">
-                                        <div class="card-body">
+                                        <img class="card-img-top" style="height:200px; width:200px; border-radius:50%; margin:40px; margin-top:10px;" src="/uploads/avatars/{{ Auth::user()->avatar }}" alt="Profile picture">
+                                        <div class="card-body" style="padding-top:20px;">
                                         <h4 class="card-title">         {{ Auth::user()->name }}</h4>
                                         <p class="card-text">Email:     {{ Auth::user()->email }}</p>
                                         <p class="card-text">Joined at: {{ Auth::user()->created_at }}</p>
+                                        
                                         </div>
                                     </div>
                                 </div>
@@ -49,6 +50,19 @@
                 
 
             <div class="settings" id="settings">
+
+            <form enctype="multipart/form-data" action="ChangePicture" method="POST">
+                {{ csrf_field() }}
+                <label for="picture">Change profile picture</label>
+
+                <div class="input-group">
+                        <input type="file" name="avatar">
+                        <span class="input-group-btn" style="width: 40%;">
+                                <button type="submit" class="btn btn-primary">Change</button>
+                        </span>
+                    </div>
+                    <br>
+            </form>
 
             <form method="POST" action="ChangeUsername">
                 {{ csrf_field() }}
@@ -85,11 +99,9 @@
                         </div>
                     </form>
                     <br>
-                    <hr>
 
+                <div style="padding-bottom:100px;"></div>
             </div>
-            <div style="padding-bottom:100px;"></div>
-        </div>
         
             
 @endsection

@@ -35,4 +35,5 @@ Route::post('/CreateReaction/{topic}', 'TopicViewController@store')->name('comme
 Route::post('/ChangeUsername', 'AccountController@storeUsername');
 Route::post('/ChangeEmail', 'AccountController@storeEmail');
 Route::post('ChangePassword', 'AccountController@storePassword');
+Route::post('ChangePicture', 'AccountController@storePassword');
 

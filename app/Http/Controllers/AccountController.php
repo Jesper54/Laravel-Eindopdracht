@@ -49,4 +49,9 @@ class AccountController extends Controller
 
         return redirect()->back();
     }
+
+    public function storePicture(Request $request)
+    {
+        
+    }
 }
