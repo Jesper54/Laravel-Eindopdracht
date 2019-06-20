@@ -37,7 +37,7 @@
                                     {{ $topics->links() }}
                                 </div>
                             </div>
-                        </div>
+                        
                         
             <br><br><br>
             <hr>
@@ -105,6 +105,7 @@
                     <br>
 
                 <div style="padding-bottom:100px;"></div>
+            </div>
             </div>
         
             

@@ -4,7 +4,14 @@
     <div class="container">
             <div class="card w-75">
                 <div class="card-body" style="height: auto; padding-bottom:50px;">
-                    <h1 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">User: {{$topic->user->name}}<br>Date: {{$topic->created_at}}</span></h1>
+                    <h1 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">User: {{$topic->user->name}}<br>
+                                                                                                       Date: {{$topic->created_at}}<br>
+                                                                                                       @if($topic->user_id == Auth::id())
+                                                                                                    <button href="{{ route('') }}" style="margin-top:10px;" class="btn btn-sm btn-primary">Edit</button>
+                                                                                                        <button href="" style="margin-top:10px;" class="btn btn-sm btn-danger">Delete</button>
+                                                                                                       @endif
+                                                                                                        
+                                                                                                        </span></h1><br>
                     <hr>
                     {!! nl2br($topic->body) !!}
                 </div>

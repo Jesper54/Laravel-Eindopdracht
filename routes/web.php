@@ -37,3 +37,4 @@ Route::post('/ChangeEmail', 'AccountController@storeEmail');
 Route::post('ChangePassword', 'AccountController@storePassword');
 Route::post('ChangePicture', 'AccountController@storePicture');
 
+Route::get('EditTopicView', 'EditController@show');
