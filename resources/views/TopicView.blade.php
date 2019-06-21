@@ -1,7 +1,8 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="container">
+<div class="container">
+
             <div class="card w-75">
                 <div class="card-body" style="height: auto; padding-bottom:50px;">
                     <h1 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">User: {{$topic->user->name}}<br>
@@ -10,14 +11,14 @@
                                                                                                     <button href="{{ route('') }}" style="margin-top:10px;" class="btn btn-sm btn-primary">Edit</button>
                                                                                                         <button href="" style="margin-top:10px;" class="btn btn-sm btn-danger">Delete</button>
                                                                                                        @endif
-                                                                                                        
+
                                                                                                         </span></h1><br>
                     <hr>
                     {!! nl2br($topic->body) !!}
                 </div>
-              </div>
             </div>
-
+              </div>
+              @auth
             <div class="container" style="padding-top:50px;">
                     <div class="card w-75">
                             <div class="card-body" style="height: auto; padding-bottom:25px;">
@@ -50,4 +51,5 @@
                    <div style="margin-left:400px; margin-top:20px;">
                    {{ $replies->links() }}
                    </div>
+                   @endauth
 @endsection
