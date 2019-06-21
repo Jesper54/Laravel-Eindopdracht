@@ -7,9 +7,9 @@
                 <div class="card-body" style="height: auto; padding-bottom:50px;">
                     <h1 class="card-title">{{$topic->title}}<span style="float:right; font-size:13px;">User: {{$topic->user->name}}<br>
                                                                                                        Date: {{$topic->created_at}}<br>
-                                                                                                       @if($topic->user_id == Auth::id())
-                                                                                                    <button href="{{ route('') }}" style="margin-top:10px;" class="btn btn-sm btn-primary">Edit</button>
-                                                                                                        <button href="" style="margin-top:10px;" class="btn btn-sm btn-danger">Delete</button>
+                                                                                                       @if($topic->user_id == Auth::id())                                    
+                                                                                                        <a href="{{ route('topic_id', ['id' => $topic->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-primary">Edit</a>
+                                                                                                        <a style="margin-top:10px; color:white;" class="btn btn-sm btn-danger">Delete</a>
                                                                                                        @endif
 
                                                                                                         </span></h1><br>
@@ -41,7 +41,14 @@
                    <div class="container" style="padding-top:10px;">
                         <div class="card w-75">
                                 <div class="card-body" style="height: auto; padding-bottom:25px;">
-                                <h5 class="card-title">{{$reply->user->name}}<span style="float:right; font-size:13px;">Date: {{$reply->created_at}}</span></h5>
+
+                                <h5 class="card-title">{{$reply->user->name}}<span style="float:right; font-size:13px;">Date: {{$reply->created_at}}<br>
+                                    @if($reply->user_id == Auth::id())                                    
+                                    <a href="{{ route('reply_id', ['id' => $reply->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-primary">Edit</a>
+                                    <a style="margin-top:10px; color:white;" class="btn btn-sm btn-danger">Delete</a>
+                                    @endif        
+                                </span></h5>
+
                                 <p class="card-text">{{ $reply->body }}</p>
                                 </div>
                            </div>

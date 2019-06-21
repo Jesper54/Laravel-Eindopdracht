@@ -29,6 +29,12 @@ Route::get('/createTopic', 'CreateTopicController@show');
 Route::get('/topicView/{topic}', 'TopicViewController@show')->name('topic');
 Route::get('/topicView', 'TopicViewController@topic')->name('topics');
 
+Route::get('/EditTopicView/{topic_id}', 'EditController@show')->name('topic_id');
+Route::post('/SubmitEdit/{topic}', 'EditController@store')->name('SubmitEdit');
+
+Route::get('/EditReply/{reply_id}', 'EditReplyController@show')->name('reply_id');
+Route::post('/SubmitReply/{reply}', 'EditReplyController@store')->name('SubmitReply');
+
 //POST
 Route::post('/createTopic', 'CreateTopicController@store');
 Route::post('/CreateReaction/{topic}', 'TopicViewController@store')->name('comment');
@@ -36,5 +42,3 @@ Route::post('/ChangeUsername', 'AccountController@storeUsername');
 Route::post('/ChangeEmail', 'AccountController@storeEmail');
 Route::post('ChangePassword', 'AccountController@storePassword');
 Route::post('ChangePicture', 'AccountController@storePicture');
-
-Route::get('EditTopicView', 'EditController@show');

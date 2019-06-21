@@ -3,21 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Replies;
 use App\Topic;
-use App\Thread;
 use Auth;
 use Redirect;
 
-class EditController extends Controller
+class EditReplyController extends Controller
 {
-    public function show(Topic $topic_id)
+    public function show(Replies $reply_id)
     {
         if(Auth::check())
         {
-            if(Auth::id() == $topic_id->user_id)
+            if(Auth::id() == $reply_id->user_id)
             {
-            $threads = Thread::select('title', 'id')->get();
-            return view('/editTopic', compact('topic_id', 'threads'));
+            return view('/editReply', compact('reply_id'));
             }
             else
             {
@@ -28,20 +27,19 @@ class EditController extends Controller
             return Redirect::route('login');   
         }
     }
-    public function store(Request $request, Topic $topic)
+
+    public function store(Request $request, Replies $reply)
     {
 
         if ($request->category == "0") {
             return;
         }
         else {
-            Topic::where('id', $topic->id)->update([
-                'title' => $request->title,
-                'thread_id' => $request->category,
+            Replies::where('id', $reply->id)->update([
                 'user_id' => Auth::id(),
                 'body' => $request->body
             ]);
-            return redirect()->to('/topicView'.'/'.$topic->id);
+            return redirect()->to('/topicView'.'/'.$reply->topic_id);
         }
     }
 }
