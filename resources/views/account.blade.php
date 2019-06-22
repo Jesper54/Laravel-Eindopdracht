@@ -62,7 +62,7 @@
                 <div class="input-group">
                         <input type="file" accept="image/*" name="avatar">
                         <span class="input-group-btn" style="width: 40%;">
-                                <button type="submit" class="btn btn-primary">Change</button>
+                                <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-primary">Change</button>
                         </span>
                     </div>
                     <br>
@@ -74,7 +74,7 @@
                         <div class="input-group">
                             <input type="text" class="form-control" name="username" id="username" placeholder="Enter new username" required>
                             <span class="input-group-btn" style="width: 40%;">
-                            <button type="submit" class="btn btn-primary">Apply</button>
+                            <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-primary">Apply</button>
                             </span>
                         </div>
                     </form>
@@ -86,7 +86,7 @@
                         <div class="input-group">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Enter new email" required>
                             <span class="input-group-btn" style="width: 40%;">
-                            <button type="submit" class="btn btn-primary">Apply</button>
+                            <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-primary">Apply</button>
                             </span>
                         </div>
                     </form>
@@ -98,7 +98,7 @@
                         <div class="input-group">
                             <input type="password" class="form-control" name="password" id="password" placeholder="Enter new password" required>
                             <span class="input-group-btn" style="width: 40%;">
-                            <button type="submit" class="btn btn-primary">Apply</button>
+                            <button onclick="return confirm('Are you sure?')" type="submit" class="btn btn-primary">Apply</button>
                             </span>
                         </div>
                     </form>

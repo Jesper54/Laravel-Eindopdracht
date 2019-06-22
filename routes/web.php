@@ -29,6 +29,9 @@ Route::get('/createTopic', 'CreateTopicController@show');
 Route::get('/topicView/{topic}', 'TopicViewController@show')->name('topic');
 Route::get('/topicView', 'TopicViewController@topic')->name('topics');
 
+Route::get('topicView/deleteTopic/{topic}', 'TopicViewController@deleteTopic')->name('delete_id');
+Route::get('topicView/deleteReply/{reply}', 'TopicViewController@deleteReply')->name('delete_reply');
+
 Route::get('/EditTopicView/{topic_id}', 'EditController@show')->name('topic_id');
 Route::post('/SubmitEdit/{topic}', 'EditController@store')->name('SubmitEdit');
 
