@@ -70,6 +70,9 @@
 
             <form method="POST" action="ChangeUsername">
                 {{ csrf_field() }}
+
+                <a style="color:red;"> {!! \Session::get('name') !!}</a><br>
+
                     <label for="username">Change username</label>
                         <div class="input-group">
                             <input type="text" class="form-control" name="username" id="username" placeholder="Enter new username" required>
@@ -82,6 +85,9 @@
 
             <form method="POST" action="ChangeEmail">
                 {{ csrf_field() }}
+
+                <a style="color:red;"> {!! \Session::get('email') !!}</a><br>
+
                     <label for="email">Change email</label>
                         <div class="input-group">
                             <input type="email" class="form-control" name="email" id="email" placeholder="Enter new email" required>
@@ -94,6 +100,9 @@
 
             <form method="POST" action="ChangePassword">
                 {{ csrf_field() }}
+
+                <a style="color:red;"> {!! \Session::get('password') !!}</a><br>
+
                     <label for="password">Change password</label>
                         <div class="input-group">
                             <input type="password" class="form-control" name="password" id="password" placeholder="Enter new password" required>

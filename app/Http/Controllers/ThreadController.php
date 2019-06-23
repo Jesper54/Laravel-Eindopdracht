@@ -11,7 +11,7 @@ class ThreadController extends Controller
 {
     public function threads()
     {
-        $threads = Thread::all();
+        $threads = Thread::paginate(6);
 
         return view('threads', compact('threads'));
     }

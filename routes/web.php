@@ -38,6 +38,9 @@ Route::post('/SubmitEdit/{topic}', 'EditController@store')->name('SubmitEdit');
 Route::get('/EditReply/{reply_id}', 'EditReplyController@show')->name('reply_id');
 Route::post('/SubmitReply/{reply}', 'EditReplyController@store')->name('SubmitReply');
 
+Route::get('/createCategory', 'createCategoryController@show');
+Route::post('/createCategorySubmit', 'createCategoryController@store');
+
 //POST
 Route::post('/createTopic', 'CreateTopicController@store');
 Route::post('/CreateReaction/{topic}', 'TopicViewController@store')->name('comment');

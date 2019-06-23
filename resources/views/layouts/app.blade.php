@@ -57,6 +57,13 @@
                                 </li>
                             @endif
                         @else
+                        <!-- Create New Category -->
+                        @if(Auth::user()->role == "1")
+                            <li class="nav-item">
+                                <a class="nav-link categories" href="{{ url('/createCategory') }}">{{ __('Make a category') }}</a>
+                            </li>
+                        @endif
+                        
 
                         <!-- Create New Topic -->
                         <li class="nav-item">

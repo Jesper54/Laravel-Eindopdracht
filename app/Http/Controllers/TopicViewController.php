@@ -37,7 +37,7 @@ class TopicViewController extends Controller
     {
         if(Auth::check())
         {
-            if(Auth::id() == $topic->user_id)
+            if(Auth::id() == $topic->user_id || Auth::user()->role == "1")
             {
                 Replies::where('topic_id', $topic->id)->delete();
                 Topic::where('id', $topic->id)->delete();
@@ -58,6 +58,15 @@ class TopicViewController extends Controller
     {
         if(Auth::check())
         {
+            if(Auth::user()->role == "1")
+            {
+                Replies::where('id', $reply->id)->update([
+                    'body' => "[Deleted by Admin]",
+                ]);
+
+                return redirect()->back();
+            }
+
             if(Auth::id() == $reply->user_id)
             {
                 Replies::where('id', $reply->id)->delete();

@@ -11,6 +11,7 @@ use Hash;
 use Image;
 use Redirect;
 use File;
+use Route;
 
 class AccountController extends Controller
 {
@@ -27,30 +28,45 @@ class AccountController extends Controller
     
     public function storeUsername(Request $request)
     {
-        $username = User::find(Auth::id());
-        $username->name = $request->username;
-        $username->save();
+        if(strlen($request->username)<5){
+            return redirect()->back()->with('name', 'Username length is too short!');  
+        }
+        else {
+            $username = User::find(Auth::id());
+            $username->name = $request->username;
+            $username->save();
 
-        return redirect()->back();
+            return redirect()->back();   
+        }
     }
 
     public function storeEmail(Request $request)
     {
-        $username = User::find(Auth::id());
-        $username->email = $request->email;
-        $username->save();
 
-        return redirect()->back();
+        if (User::where('email', '=', $request->email)->exists()) {
+            return redirect()->back()->with('email', 'Email is already taken');  
+        }
+        else {
+            $username = User::find(Auth::id());
+            $username->email = $request->email;
+            $username->save();
+    
+            return redirect()->back();   
+        }
     }
 
     public function storePassword(Request $request)
     {
-
-        $user = User::find(Auth::id());
-        $user->password = Hash::make($request->password);
-        $user->save();
-
-        return redirect()->back();
+        if (strlen($request->password)<8) {
+            return redirect()->back()->with('password', 'Password length is too short');  
+          }
+          else {
+            $user = User::find(Auth::id());
+            $user->password = Hash::make($request->password);
+            $user->save();
+    
+            return redirect()->back();
+          }
     }
 
     public function storePicture(Request $request)

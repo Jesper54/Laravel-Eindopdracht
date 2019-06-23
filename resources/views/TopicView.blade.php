@@ -9,6 +9,8 @@
                                                                                                        Date: {{$topic->created_at}}<br>
                                                                                                        @if($topic->user_id == Auth::id())                                    
                                                                                                         <a href="{{ route('topic_id', ['id' => $topic->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-primary">Edit</a>
+                                                                                                        @endif
+                                                                                                        @if($topic->user_id == Auth::id() || Auth::user()->role == "1")
                                                                                                         <a onclick="return confirm('Are you sure?')" href="{{ route('delete_id', ['id' =>$topic->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-danger">Delete</a>
                                                                                                        @endif
 
@@ -45,6 +47,8 @@
                                 <h5 class="card-title">{{$reply->user->name}}<span style="float:right; font-size:13px;">Date: {{$reply->created_at}}<br>
                                     @if($reply->user_id == Auth::id())                                    
                                     <a href="{{ route('reply_id', ['id' => $reply->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-primary">Edit</a>
+                                    @endif
+                                    @if($reply->user_id == Auth::id() || Auth::user()->role == "1")
                                     <a onclick="return confirm('Are you sure?')" href="{{ route('delete_reply', ['id' => $reply->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-danger">Delete</a>
                                     @endif        
                                 </span></h5>

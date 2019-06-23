@@ -15,7 +15,7 @@
         <!-- For each met alle topics die er al zijn vanuit de database -->
           @foreach ($threads as $thread)
           <div class="col-sm-6">
-                <div class="card">
+                <div class="card" style="margin-bottom:30px;">
                   <div class="card-body">
                   <h5 class="card-title">{{$thread->title}}</h5>
                   <p class="card-text">{{$thread->body}}</p>
@@ -24,5 +24,7 @@
                 </div>
               </div>
           @endforeach
+
+          {{ $threads->links() }}
 
 @endsection
