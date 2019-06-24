@@ -8,7 +8,7 @@
                     <h1>Create Category</h1>
                 </div>
             </div>
-
+            {{-- Categorie aanmaken, pagina is alleen beschikbaar voor de admin --}}
           <form method="post" action="createCategorySubmit">
 
               {{ csrf_field() }}

@@ -9,6 +9,8 @@
                 </div>
             </div>
 
+            {{-- Bewerk een reactie pagina, deze pagina kan je alleen zien als de reply van jezelf is --}}
+
           <form method="post" action="{{ route('SubmitReply', ['reply' => $reply_id->id]) }}">
 
               {{ csrf_field() }}

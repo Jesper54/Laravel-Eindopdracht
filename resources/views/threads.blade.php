@@ -11,6 +11,7 @@
         <!-- Categorieën -->
         <div class="row">
 
+        <!-- Een overzicht van alle categorieën -->
 
         <!-- For each met alle topics die er al zijn vanuit de database -->
           @foreach ($threads as $thread)

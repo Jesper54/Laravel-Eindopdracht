@@ -9,6 +9,8 @@
                 </div>
             </div>
 
+            {{-- Create topic pagina, deze pagina is beschikbaar voor iedereen --}}
+
           <form method="post" action="createTopic">
 
               {{ csrf_field() }}

@@ -9,6 +9,8 @@
                 </div>
             </div>
 
+            {{-- De edit topic pagina kan alleen de persoon zien van die de geselecteerde topic is --}}
+
           <form method="post" action="{{ route('SubmitEdit', ['topic' => $topic_id->id]) }}">
 
               {{ csrf_field() }}
@@ -22,7 +24,7 @@
                   <label for="category">Category</label>
                   <select class="form-control" name="category" id="category">
                   <option value="{{$topic_id->thread_id}}" selected>Keep Same Category</option>
-                    @foreach ($threads as $item) 
+                    @foreach ($threads as $item)
                         <option value="{{ $item->id }}">{{ $item->title }}</option>
                     @endforeach
                   </select>

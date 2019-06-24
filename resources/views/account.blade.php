@@ -13,18 +13,19 @@
                     <div class="row">
                         <div class="col-md-4" style="padding-bottom:100px;">
                                 <div class="card" style="width: 18rem; margin-top:29px;">
-                                        {{-- Nog upload maken voor profiel foto --}}
+                                        {{-- ALle informatie van het profiel van de gebruiker --}}
                                         <img class="card-img-top" style="height:200px; width:200px; border-radius:50%; margin:40px; margin-top:10px;" src="/uploads/avatars/{{ Auth::user()->avatar }}" alt="Profile picture">
                                         <div class="card-body" style="padding-top:20px;">
                                         <h4 class="card-title">         {{ Auth::user()->name }}</h4>
                                         <p class="card-text">Email:     {{ Auth::user()->email }}</p>
                                         <p class="card-text">Joined at: {{ Auth::user()->created_at }}</p>
-                                        
+
                                         </div>
                                     </div>
                                 </div>
                             <div class="col-md-8">
                                     <h5>Your topics</h5>
+                                    {{-- Foreach van alle topics van die gebruiker --}}
                                     @foreach ($topics as $item)
                                         <div class="card w-75">
                                                 <div class="card-body">
@@ -37,8 +38,8 @@
                                     {{ $topics->links() }}
                                 </div>
                             </div>
-                        
-                        
+
+
             <br><br><br>
             <hr>
 
@@ -47,7 +48,7 @@
                         <h3>Settings</h3>
                     </div>
                 </div>
-                
+
 
             <div class="settings" id="settings">
 
@@ -55,6 +56,7 @@
                     <a style="color:red">{{$errors->first()}}</a>
                     @endif
 
+                    {{-- Profiel foto wijzigen --}}
             <form enctype="multipart/form-data" action="ChangePicture" method="POST">
                 {{ csrf_field() }}
                 <label for="picture">Change profile picture</label>
@@ -68,6 +70,7 @@
                     <br>
             </form>
 
+            {{-- Username wijzigen --}}
             <form method="POST" action="ChangeUsername">
                 {{ csrf_field() }}
 
@@ -83,6 +86,7 @@
                     </form>
                     <br>
 
+            {{-- Email wijzigen --}}
             <form method="POST" action="ChangeEmail">
                 {{ csrf_field() }}
 
@@ -98,6 +102,7 @@
                     </form>
                     <br>
 
+            {{-- Password wijzigen --}}
             <form method="POST" action="ChangePassword">
                 {{ csrf_field() }}
 
@@ -116,6 +121,6 @@
                 <div style="padding-bottom:100px;"></div>
             </div>
             </div>
-        
-            
+
+
 @endsection

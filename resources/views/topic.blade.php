@@ -11,6 +11,7 @@
 
         <!-- Topics -->
 
+        <!-- Een overzicht van alle topics die bij de geselecteerde categorie horen -->
 
         <!-- For each met alle topics die er al zijn vanuit de database -->
           @foreach ($topics as $topic)
