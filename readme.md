@@ -1,6 +1,6 @@
 ## Get it working
 - Clone this github repository
-- Open the commandline and enter 'composer install'
+- Open the commandline and enter 'composer install', 'composer update'
 - enter 'php artisan migrate:fresh'
 - configure the .env file
 - enter 'php artisan serve'
