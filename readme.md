@@ -1,3 +1,13 @@
+## Get it working
+- Clone this github repository
+- Open the commandline and enter 'composer install'
+- enter 'php artisan migrate:fresh'
+- configure the .env file
+- enter 'php artisan serve'
+
+Project made by Jesper Bralten
+
+
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
 <p align="center">
