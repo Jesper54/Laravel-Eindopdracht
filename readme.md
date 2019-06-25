@@ -9,6 +9,9 @@ Dit project heb ik alleen gemaakt. Dus geen groepje. Van dit project heb ik enor
 
 Project made by Jesper Bralten
          Class: ITA4-2A
+         
+         
+         <hr>
 
 
 <p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
