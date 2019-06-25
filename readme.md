@@ -1,5 +1,5 @@
 ## Get it working
-<- Clone this github repository
+- Clone this github repository
 - Open the commandline and enter 'composer install'
 - enter 'php artisan migrate:fresh'
 - configure the .env file
@@ -8,7 +8,11 @@
 Dit project heb ik alleen gemaakt. Dus geen groepje. Van dit project heb ik enorm veel geleerd en wat ik de volgende keer beter kan doen. Ook ben ik ervan overtuigt dat laravel veel makkelijker en handiger is dan plain php.
 
 Project made by Jesper Bralten
-         Class: ITA4-2A>
+         Class: ITA4-2A
+         
+         
+         
+________________________________________________________________________________________________________________________________________
          
          
          
