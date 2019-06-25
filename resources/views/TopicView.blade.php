@@ -47,7 +47,7 @@
                    <div class="container" style="padding-top:10px;">
                         <div class="card w-75">
                                 <div class="card-body" style="height: auto; padding-bottom:25px;">
-
+                                                        {{-- Hier haalt hij de items van de reply uit de database --}}
                                 <h5 class="card-title">{{$reply->user->name}}<span style="float:right; font-size:13px;">Date: {{$reply->created_at}}<br>
                                     @if($reply->user_id == Auth::id())
                                     <a href="{{ route('reply_id', ['id' => $reply->id]) }}" style="margin-top:10px; color:white;" class="btn btn-sm btn-primary">Edit</a>

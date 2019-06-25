@@ -20,6 +20,7 @@ class Topic extends Model
 
     protected $fillable =
     [
+        // mag gevuld worden met informatie in de database
         'title', 'user_id', 'thread_id', 'body'
     ];
 

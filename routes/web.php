@@ -19,7 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
-//Custom routes;
+// Alle eigen routes gemaakte routes voor de functionaliteit
 Route::get('threads', 'ThreadController@threads')->name('threads');
 Route::get('threads/{thread}', 'ThreadController@show')->name('threads.id');
 Route::get('/topic', 'TopicController@topic');
