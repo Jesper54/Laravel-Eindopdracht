@@ -13,6 +13,5 @@ Beperkte rechten waardoor diegene zijn profielfoto kan wijzigen en profiel kan w
 <br>
 
 
-- Admins
-<br>
+- Admins <br>
 Alle rechten dus ook reacties onder een topic verwijderen en bewerken 
