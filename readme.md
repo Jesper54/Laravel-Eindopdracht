@@ -5,11 +5,13 @@
 - Nieuwe functies zijn mogelijk
 - Het forum is niet accuraat via de laravel conventies geschreven
 <br>
-
+<br>
 
 - Gebruikers
+<br>
 Beperkte rechten waardoor diegene zijn profielfoto kan wijzigen en profiel kan wijzigen
 
 
 - Admins
+<br>
 Alle rechten dus ook reacties onder een topic verwijderen en bewerken 
