@@ -11,6 +11,8 @@
 <br>
 Beperkte rechten waardoor diegene zijn profielfoto kan wijzigen en profiel kan wijzigen
 
+<br>
+
 
 - Admins
 <br>
