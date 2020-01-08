@@ -4,7 +4,7 @@
 - Profiel is nog niet toegangelijk
 - Nieuwe functies zijn mogelijk
 - Het forum is niet accuraat via de laravel conventies geschreven
-
+<br>
 
 
 - Gebruikers
