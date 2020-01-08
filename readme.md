@@ -8,7 +8,8 @@
 <br>
 
 - Gebruikers <br>
-Beperkte rechten waardoor diegene zijn profielfoto kan wijzigen en profiel kan wijzigen
+Beperkte rechten waardoor diegene zijn profielfoto kan wijzigen en profiel kan wijzigen <br>
+Reacties plaatsen, Reacties bewerken, Eigen reactie verwijderen, Gesprek aanmaken.
 
 <br>
 
