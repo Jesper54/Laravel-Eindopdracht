@@ -48,3 +48,6 @@ Route::post('/ChangeUsername', 'AccountController@storeUsername');
 Route::post('/ChangeEmail', 'AccountController@storeEmail');
 Route::post('ChangePassword', 'AccountController@storePassword');
 Route::post('ChangePicture', 'AccountController@storePicture');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
